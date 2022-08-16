@@ -56,3 +56,6 @@ Applications such as Slack, Discord, VSCode, WhatsApp, Skype and many others tha
 process.stdout.write =>
 javascript stream
 javascript pipe
+
+// "controllers" — functions that separate out the code to route requests from the code that actually processes requests.
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes

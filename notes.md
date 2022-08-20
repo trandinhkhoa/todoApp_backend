@@ -17,6 +17,36 @@ MongoDB
 collection = table
 document = record/row
 
+Installing MongoDB 6.0 Community Edition
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
+
+
+
+mongosh
+https://www.mongodb.com/docs/mongodb-shell/
+
+<!-- show db -->
+show dbs
+
+<!-- switch db -->
+use <db>
+https://www.mongodb.com/docs/manual/reference/mongo-shell/#command-helpers
+
+<!-- show all collection -->
+show collections
+
+<!-- SELECT * FROM <TABLE> -->
+db.<collection>.find({})
+
+<!-- DELETE * FROM <TABLE> -->
+db.<collection>.deleteMany({})
+
+<!-- INSERT -->
+db.<collection>.insertOne({key1: "abc123", key2: "cde123"})
+db.<collection>.insertManey({key1: "abc123", key2: "cde123"}, {key1: "abc123")
+
+<!-- UPDATE -->
+db.<collection>.updateMany({key1: "abc123"}, { $set: { done: req.query.done } })
 
 most browsers have runtimes which run js
 nodejs is a runtime running outside of browser
@@ -59,3 +89,37 @@ javascript pipe
 
 // "controllers" — functions that separate out the code to route requests from the code that actually processes requests.
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes
+
+
+https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
+
+javascript async func
+https://bytefish.medium.com/the-execution-order-of-asynchronous-functions-in-the-event-loop-ff641dae4f09
+
+```
+async function foo() {
+    return 42;
+}
+```
+is sugar for
+
+```
+function foo() {
+    return new Promise(resolve => {
+        resolve(42);
+    });
+}
+```
+and sugar for
+
+```
+let data = await something();
+// ...do somthing...
+```
+is
+
+```
+something().then(data => {
+    // ...do something...
+});
+```
